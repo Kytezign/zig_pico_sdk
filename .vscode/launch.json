@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Test",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/test.py",
+            "console": "integratedTerminal",
+            "args": [
+                
+            ]
+        }
+    ]
+}
