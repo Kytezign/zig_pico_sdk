@@ -12,4 +12,5 @@ def system(cmd):
 if __name__ == "__main__":
     os.chdir("src")
     system("clear")
-    system('zig build load')
+    # system('zig build load')
+    system('zig build')

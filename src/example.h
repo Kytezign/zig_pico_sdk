@@ -1,7 +1,3 @@
-// ... anyway this seems needed for zig translate-c
-#include "llvm_libc/sys/cdefs.h"
-
-
 // include headers we want to use here.
 #include "hardware/gpio.h"
 #include "pico/time.h"

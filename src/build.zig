@@ -115,6 +115,9 @@ fn getPicoSdk(b: *std.Build, root_source_file: std.Build.LazyPath, platform: Pic
 
     // Works around some issue when importing uart.h
     c_translate.defineCMacroRaw("PICO_DEFAULT_UART_INSTANCE()=uart0");
+    // Related to the libc issues above I think.
+    c_translate.defineCMacroRaw("__unused=__attribute__((__unused__))");
+
     // not sure how important these are... see {pico_sdk}/src/rp2040.cmake
     switch (platform) {
         .RP2040 => {

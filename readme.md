@@ -40,9 +40,10 @@ Reference: https://wiki.archlinux.org/title/Udev
 # Potential next steps
 - Can we automate PICO_STDIO_USB_ENABLE_RESET_VIA_VENDOR_INTERFACE?
 	- I'd like to use tinyusb also so might not work well.
-- I'd really like to get everything building with zig but I could not figure it out this time - the sdk is messy.
+- Build with zig.
 	- https://dev.to/hamishmilne/zig-cmake-4pmc
 	- https://github.com/ziglang/zig/issues/7342
+- Or just link with zig?
 - Can we add documentation to the zig translation?
 	- Thinking just copy the previous comment as a /// comment in zig
 - Optimization exploration
