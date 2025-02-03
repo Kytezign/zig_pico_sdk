@@ -141,7 +141,12 @@ fn getPicoSdk(b: *std.Build, root_source_file: std.Build.LazyPath, platform: Pic
     const temp_gen_header2 = b.addSystemCommand(&temp_header_argv2);
     b.allocator.free(temp_path);
     temp_gen_header2.step.dependOn(&temp_gen_header.step);
-    c_translate.step.dependOn(&temp_gen_header2.step);
+    temp_path = try std.fs.path.join(b.allocator, &[_][]const u8{ b.install_path, "generated", "pico_base", "pico", "version.h" });
+    const temp_header_argv3 = [_][]const u8{ "touch", temp_path };
+    const temp_gen_header3 = b.addSystemCommand(&temp_header_argv3);
+    b.allocator.free(temp_path);
+    temp_gen_header3.step.dependOn(&temp_gen_header2.step);
+    c_translate.step.dependOn(&temp_gen_header3.step);
     // ZLS workaround done...
 
     return c_translate;
