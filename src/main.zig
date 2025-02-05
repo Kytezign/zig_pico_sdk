@@ -1,7 +1,8 @@
 const hal = @import("pico_sdk");
 
-// Blinky example
+// Blink-y example
 // The sdk zig module is not perfect but it's pretty good...
+// Autocomplete with zls should work also.
 const LED_PIN = 25;
 
 export fn main() void {
